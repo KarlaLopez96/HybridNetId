@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         final TextView broad4 = (TextView) findViewById(R.id.broadId4);
 
         final TextView host2 = (TextView) findViewById(R.id.host1);
+        final TextView red = (TextView ) findViewById(R.id.broad4);
+        final TextView host3 = (TextView) findViewById(R.id.broad5);
 
         botonCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,7 +79,23 @@ public class MainActivity extends AppCompatActivity {
                 int host = (int) (pow(2,32-mascara)-2);
                 host2.setText(""+host);
 
+                //Calculando la parte de red y parte de host.
+                switch (mascaraDecimal [4]){
+                    case 0:
+                        red.setText(o1+".x.x.x");
+                        host3.setText("x."+o2+"."+o3+"."+o4);
+                        break;
 
+                    case 1:
+                        red.setText(o1+"."+o2+".x.x");
+                        host3.setText("x.x."+o3+"."+o4);
+                        break;
+
+                    case 2:
+                        red.setText(o1+"."+o2+"."+o3+".x");
+                        host3.setText("x.x.x."+o4);
+                        break;
+                }
 
             }
         });
@@ -104,6 +122,8 @@ public class MainActivity extends AppCompatActivity {
                 nId3.setText("");
                 nId4.setText("");
 
+                red.setText("");
+                host3.setText("");
 
             }
         });
