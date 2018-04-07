@@ -17,18 +17,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="IP"
-
-
-        />
+        android:text="IP" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Mascara"
-            android:layout_marginLeft="260dp"
-
-            />
+            android:layout_marginLeft="260dp" />
 
 
     </LinearLayout>
@@ -399,9 +394,5 @@
             android:src="@drawable/clear"
             android:background="#FFF"
             android:layout_marginLeft="10dp"/>
-
-
-
-
     </LinearLayout>
 </LinearLayout>

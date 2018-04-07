@@ -48,125 +48,21 @@ public class MainActivity extends AppCompatActivity {
                 int o3 = Integer.valueOf(octal3.getText().toString());
                 int o4 = Integer.valueOf(octal4.getText().toString());
 
-                x = mascara / 8;
-                y = mascara % 8;
 
-                if (x == 0) {
+                int[] mascaraDecimal = Mascara.plecaADecimal(mascara);
 
-                    m1 = (int) (256 - (Math.pow(2, (8 - y))));
-                    m2 = 0;
-                    m3 = 0;
-                    m4 = 0;
+                int NetId_01 = o1 & mascaraDecimal[0];
+                int NetId_02 = o2 & mascaraDecimal[1];
+                int NetId_03 = o3 & mascaraDecimal[2];
+                int NetId_04 = o4 & mascaraDecimal[3];
 
-                    mask1.setText("" + m1);
-                    mask2.setText("" + m2);
-                    mask3.setText("" + m3);
-                    mask4.setText("" + m4);
-
-                    int n1 = o1 & m1;
-                    int n2 = o2 & m2;
-                    int n3 = o3 & m3;
-                    int n4 = o4 & m4;
-
-                    nId1.setText("" + n1);
-                    nId2.setText("" + n2);
-                    nId3.setText("" + n3);
-                    nId4.setText("" + n4);
-                } else {
-                    if (x == 1) {
+                int broad_01 = NetId_01 ^ (~mascaraDecimal[0]);
+                int broad_02 = NetId_02 ^ (~mascaraDecimal[1]);
+                int broad_03 = NetId_03 ^ (~mascaraDecimal[2]);
+                int broad_04 = NetId_04 ^ (~mascaraDecimal[3]);
 
 
-                        m1 = 255;
-                        m2 = (int) (256 - (Math.pow(2, (8 - y))));
-                        m3 = 0;
-                        m4 = 0;
 
-                        mask1.setText("" + m1);
-                        mask2.setText("" + m2);
-                        mask3.setText("" + m3);
-                        mask4.setText("" + m4);
-
-                        int n1 = o1 & m1;
-                        int n2 = o2 & m2;
-                        int n3 = o3 & m3;
-                        int n4 = o4 & m4;
-
-                        nId1.setText("" + n1);
-                        nId2.setText("" + n2);
-                        nId3.setText("" + n3);
-                        nId4.setText("" + n4);
-
-
-                    } else {
-                        if (x == 2) {
-
-                            m1 = 255;
-                            m2 = 255;
-                            m3 = (int) (256 - (Math.pow(2, (8 - y))));
-                            m4 = 0;
-
-                            mask1.setText("" + m1);
-                            mask2.setText("" + m2);
-                            mask3.setText("" + m3);
-                            mask4.setText("" + m4);
-
-                            int n1 = o1 & m1;
-                            int n2 = o2 & m2;
-                            int n3 = o3 & m3;
-                            int n4 = o4 & m4;
-
-                            nId1.setText("" + n1);
-                            nId2.setText("" + n2);
-                            nId3.setText("" + n3);
-                            nId4.setText("" + n4);
-                        } else {
-                            if (x == 3) {
-
-                                m1 = 255;
-                                m2 = 255;
-                                m3 = 255;
-                                m4 = (int) (256 - (Math.pow(2, (8 - y))));
-
-                                mask1.setText("" + m1);
-                                mask2.setText("" + m2);
-                                mask3.setText("" + m3);
-                                mask4.setText("" + m4);
-
-                                int n1 = o1 & m1;
-                                int n2 = o2 & m2;
-                                int n3 = o3 & m3;
-                                int n4 = o4 & m4;
-
-                                nId1.setText("" + n1);
-                                nId2.setText("" + n2);
-                                nId3.setText("" + n3);
-                                nId4.setText("" + n4);
-                            } else {
-                                if (x == 4) {
-                                    m1 = 255;
-                                    m2 = 255;
-                                    m3 = 255;
-                                    m4 = 255;
-
-                                    mask1.setText("" + m1);
-                                    mask2.setText("" + m2);
-                                    mask3.setText("" + m3);
-                                    mask4.setText("" + m4);
-
-                                    int n1 = o1 & m1;
-                                    int n2 = o2 & m2;
-                                    int n3 = o3 & m3;
-                                    int n4 = o4 & m4;
-
-                                    nId1.setText("" + n1);
-                                    nId2.setText("" + n2);
-                                    nId3.setText("" + n3);
-                                    nId4.setText("" + n4);
-                                }
-                            }
-                        }
-                    }
-                }
             }
         });
 
