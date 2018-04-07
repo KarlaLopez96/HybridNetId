@@ -86,7 +86,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
                 octal1.setText("");
                 octal2.setText("");
                 octal3.setText("");
