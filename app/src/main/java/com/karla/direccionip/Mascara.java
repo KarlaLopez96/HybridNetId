@@ -41,26 +41,32 @@ public class Mascara {
             case 23:
                 mascarDecimal [3] = 0;
                 mascarDecimal [2] = 254;
+                mascarDecimal[4] = 2;
                 break;
             case 22:
                 mascarDecimal [3] = 0;
                 mascarDecimal [2] = 252;
+                mascarDecimal[4] = 2;
                 break;
             case 21:
                 mascarDecimal [3] = 0;
                 mascarDecimal [2] = 248;
+                mascarDecimal[4] = 2;
                 break;
             case 20:
                 mascarDecimal [3] = 0;
                 mascarDecimal [2] =240;
+                mascarDecimal[4] = 2;
                 break;
             case 19:
                 mascarDecimal [3] = 0;
                 mascarDecimal [2] = 224;
+                mascarDecimal[4] = 2;
                 break;
             case 18:
                 mascarDecimal [3] = 0;
                 mascarDecimal [2] = 192;
+                mascarDecimal[4] = 2;
                 break;
             case 17:
                 mascarDecimal [3] = 0;
@@ -77,31 +83,37 @@ public class Mascara {
                 mascarDecimal [3] = 0;
                 mascarDecimal [2] = 0;
                 mascarDecimal [1] = 254;
+                mascarDecimal[4] = 1;
                 break;
             case 14:
                 mascarDecimal [3] = 0;
                 mascarDecimal [2] = 0;
                 mascarDecimal [1] = 252;
+                mascarDecimal[4] = 1;
                 break;
             case 13:
                 mascarDecimal [3] = 0;
                 mascarDecimal [2] = 0;
                 mascarDecimal [1] = 248;
+                mascarDecimal[4] = 1;
                 break;
             case 12:
                 mascarDecimal [3] = 0;
                 mascarDecimal [2] = 0;
                 mascarDecimal [1] = 240;
+                mascarDecimal[4] = 1;
                 break;
             case 11:
                 mascarDecimal [3] = 0;
                 mascarDecimal [2] = 0;
                 mascarDecimal [1] = 224;
+                mascarDecimal[4] = 1;
                 break;
             case 10:
                 mascarDecimal [3] = 0;
                 mascarDecimal [2] = 0;
                 mascarDecimal [1] = 192;
+                mascarDecimal[4] = 1;
                 break;
             case 9:
                 mascarDecimal [3] = 0;
@@ -121,48 +133,56 @@ public class Mascara {
                 mascarDecimal [2] = 0;
                 mascarDecimal [1] = 0;
                 mascarDecimal [0] = 254;
+                mascarDecimal[4] = 0;
                 break;
             case 6:
                 mascarDecimal [3] = 0;
                 mascarDecimal [2] = 0;
                 mascarDecimal [1] = 0;
                 mascarDecimal [0] = 252;
+                mascarDecimal[4] = 0;
                 break;
             case 5:
                 mascarDecimal [3] = 0;
                 mascarDecimal [2] = 0;
                 mascarDecimal [1] = 0;
                 mascarDecimal [0] = 248;
+                mascarDecimal[4] = 0;
                 break;
             case 4:
                 mascarDecimal [3] = 0;
                 mascarDecimal [2] = 0;
                 mascarDecimal [1] = 0;
                 mascarDecimal [0] = 240;
+                mascarDecimal[4] = 0;
                 break;
             case 3:
                 mascarDecimal [3] = 0;
                 mascarDecimal [2] = 0;
                 mascarDecimal [1] = 0;
                 mascarDecimal [0] = 224;
+                mascarDecimal[4] = 0;
                 break;
             case 2:
                 mascarDecimal [3] = 0;
                 mascarDecimal [2] = 0;
                 mascarDecimal [1] = 0;
                 mascarDecimal [0] = 192;
+                mascarDecimal[4] = 0;
                 break;
             case 1:
                 mascarDecimal [3] = 0;
                 mascarDecimal [2] = 0;
                 mascarDecimal [1] = 0;
                 mascarDecimal [0] = 128;
+                mascarDecimal[4] = 0;
                 break;
             case 0:
                 mascarDecimal [3] = 0;
                 mascarDecimal [2] = 0;
                 mascarDecimal [1] = 0;
                 mascarDecimal [0] = 0;
+                mascarDecimal[4] = 0;
                 break;
         }
 
