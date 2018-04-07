@@ -38,8 +38,9 @@
             android:id="@+id/Oct1"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:background="#DFDCDC"
+            android:background="#e1bee7"
             android:textSize="22dp"
+            android:maxLength="3"
             android:padding="4dp"
             android:gravity="center"/>
         <TextView
@@ -55,8 +56,9 @@
             android:id="@+id/Oct2"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:background="#DFDCDC"
+            android:background="#e1bee7"
             android:textSize="22dp"
+            android:maxLength="3"
             android:padding="4dp"
             android:gravity="center"
             />
@@ -74,8 +76,9 @@
             android:id="@+id/Oct3"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:background="#DFDCDC"
+            android:background="#e1bee7"
             android:textSize="22dp"
+            android:maxLength="3"
             android:padding="4dp"
             android:gravity="center"/>
 
@@ -91,8 +94,9 @@
             android:id="@+id/Oct4"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:background="#DFDCDC"
+            android:background="#e1bee7"
             android:textSize="22dp"
+            android:maxLength="3"
             android:padding="4dp"
             android:gravity="center"/>
 
@@ -112,6 +116,7 @@
             android:layout_height="wrap_content"
             android:background="#FFC7E4"
             android:textSize="22dp"
+            android:maxLength="2"
             android:padding="4dp"
             android:gravity="center"/>
 
@@ -364,11 +369,11 @@
 
         <TextView
             android:id="@+id/broad5"
-            android:layout_width="88dp"
+            android:layout_width="144dp"
             android:layout_height="wrap_content"
             android:background="#ffb74d"
             android:layout_marginTop="5dp"
-            android:layout_marginRight="98dp"
+            android:layout_marginRight="88dp"
             android:textSize="22dp"
             android:padding="4dp"
             android:gravity="center" />
