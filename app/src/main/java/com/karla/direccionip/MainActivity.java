@@ -8,6 +8,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import static java.lang.Math.pow;
+
 public class MainActivity extends AppCompatActivity {
     EditText octal1, octal2, octal3, octal4, m;
     TextView nId1, nId2, nId3, nId4;
@@ -36,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         final TextView broad3 = (TextView) findViewById(R.id.broadId3);
         final TextView broad4 = (TextView) findViewById(R.id.broadId4);
 
+        final TextView host2 = (TextView) findViewById(R.id.host1);
+
         botonCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
                 int[] mascaraDecimal = Mascara.plecaADecimal(mascara);
 
+                //Calculando la net ID.
                 int NetId_01 = o1 & mascaraDecimal[0];
                 int NetId_02 = o2 & mascaraDecimal[1];
                 int NetId_03 = o3 & mascaraDecimal[2];
@@ -57,20 +62,22 @@ public class MainActivity extends AppCompatActivity {
                 nId3.setText(""+NetId_03);
                 nId4.setText(""+NetId_04);
 
-                /*int broad_01 = ( ( o1 | mascaraDecimal[0] ) & ~( o1 & mascaraDecimal[0] ) );
-                int broad_02 = ( ( o2 | mascaraDecimal[1] ) & ~( o2 & mascaraDecimal[1] ) );
-                int broad_03 = ( ( o3 | mascaraDecimal[2] ) & ~( o3 & mascaraDecimal[2] ) );
-                int broad_04 = ( ( o4 | mascaraDecimal[3] ) & ~( o4 & mascaraDecimal[3] ) );*/
-
-                int broad_01 = o1 ^  mascaraDecimal[0];
-                int broad_02 = o2 ^  mascaraDecimal[1];
-                int broad_03 = o3 ^  mascaraDecimal[2];
-                int broad_04 = o4 ^  mascaraDecimal[3];
+                //Calculando el broadcast.
+                int broad_01 = (o1 | (255-mascaraDecimal[0]));
+                int broad_02 = (o2 | (255-mascaraDecimal[1]));
+                int broad_03 = (o3 | (255-mascaraDecimal[2]));
+                int broad_04 = (o4 | (255-mascaraDecimal[3]));
 
                 broad1.setText(""+broad_01);
                 broad2.setText(""+broad_02);
                 broad3.setText(""+broad_03);
                 broad4.setText(""+broad_04);
+
+                //Calculando el número de host disponibles.
+                int host = (int) (pow(2,32-mascara)-2);
+                host2.setText(""+host);
+
+
 
             }
         });
@@ -85,6 +92,13 @@ public class MainActivity extends AppCompatActivity {
                 octal3.setText("");
                 octal4.setText("");
                 m.setText("");
+
+                broad1.setText("");
+                broad2.setText("");
+                broad3.setText("");
+                broad4.setText("");
+
+                host2.setText("");
 
                 nId1.setText("");
                 nId2.setText("");
